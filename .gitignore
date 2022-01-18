@@ -10,6 +10,7 @@
 
 # IDEs and editors
 .vscode/
+.angular/
 /.idea
 .project
 .classpath
