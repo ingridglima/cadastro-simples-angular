@@ -1,7 +1,11 @@
 import{ Routes } from '@angular/router';
-import { FormularioComponent } from './cadastro/formulario/formulario.component'; 
+import { HomeComponent} from './home/home.component';
+import { FormularioComponent } from './cadastro/formulario/formulario.component';
+import { ListagemComponent } from './cadastro/listagem/listagem.component';
 
 export const rootRouterConfig: Routes = [
     {path: '', redirectTo: '/form', pathMatch: 'full'},
-    {path: 'home', component: FormularioComponent}
+    {path: 'home', component: HomeComponent},
+    {path: 'cadastro', component: FormularioComponent},
+    {path: 'listagem', component: ListagemComponent}
 ];

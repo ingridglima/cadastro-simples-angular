@@ -1,0 +1,27 @@
+
+  <div style="margin-top: 10%;">
+    <table class="table table-striped" style="width: 60%;margin-left: 18%;">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Email</th>
+          <th scope="col">Cidade</th>
+          <th scope="col">Estado</th>
+          <th scope="col">Observações</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let cadastro of cadastros">
+        <tr >
+          <th scope="row"></th>
+          <td>{{cadastro.id}}</td>
+          <td>{{cadastro.nome}}</td>
+          <td>{{cadastro.email}}</td>
+          <td>{{cadastro.localidade}}</td>
+          <td>{{cadastro.uf}}</td>
+          <td>{{cadastro.observacoes}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
