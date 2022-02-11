@@ -1,0 +1,34 @@
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { ItemLista } from '../listagem/item.lista';
+import { Observable } from 'rxjs';
+
+
+@Injectable()
+export class ListagemService {
+
+    httpOptions = {
+        headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+      }
+    constructor(private http: HttpClient) { }
+
+    obterCadastros() : Observable<ItemLista[]> {
+        return this.http
+        .get<ItemLista[]>('http://localhost:3000/cadastros');
+    }
+
+    excluirCadastro(id : any){
+        this.http.delete('http://localhost:3000/cadastros/'+id, this.httpOptions)
+        .subscribe(
+            (val) => {
+                console.log("POST call successful value returned in body", 
+                            val);
+            },
+            response => {
+                console.log("POST call in error", response);
+            },
+            () => {
+                console.log("The POST observable is now completed.");
+            });
+    }
+}

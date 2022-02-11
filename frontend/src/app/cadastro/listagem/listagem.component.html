@@ -1,0 +1,28 @@
+
+  <div style="margin-top: 10%;">
+    <table class="table" style="width: 70%;margin-left: 13%;">
+      <thead style="background-color: black;color: #A9A9A9;">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Email</th>
+          <th scope="col">Cidade</th>
+          <th scope="col">Estado</th>
+          <th scope="col">Observações</th>
+          <th scope="col">Ações<th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let cadastro of cadastros">
+        <tr >
+          <th scope="row"></th>
+          <td>{{cadastro.nome}}</td>
+          <td>{{cadastro.email}}</td>
+          <td>{{cadastro.localidade}}</td>
+          <td>{{cadastro.uf}}</td>
+          <td>{{cadastro.observacoes}}</td>
+          <td><button type="submit" class="btn-danger" (click)='excluirCadastro(cadastro)'>Excluir</button><td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
